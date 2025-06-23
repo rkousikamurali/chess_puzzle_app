@@ -8,7 +8,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin : "https://chess-puzzle-app-rkousikamuralis-projects.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // Import router directly

@@ -369,7 +369,8 @@ const App: React.FC = () => {
 
   const loadPuzzle = async () => {
     // const res = await axios.get("http://localhost:3001/api/puzzles/random");
-    const res = await axios.get("https://02b9-49-205-84-206.ngrok-free.app/api/puzzles/random");
+    // const res = await axios.get("https://02b9-49-205-84-206.ngrok-free.app/api/puzzles/random");
+    const res = await axios.get("https://loosely-immense-quail.ngrok-free.app/api/puzzles/random");
     const data: Puzzle = res.data;
     const newGame = new Chess();
     newGame.load(data.initialFen);
