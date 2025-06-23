@@ -1,0 +1,14 @@
+LOAD DATABASE
+     FROM sqlite:///backend/lichess_puzzles.db
+     INTO postgresql://lichess_puzzles_user:TpDJbfo4Pap4UcrNBRO42uPR9Rlmtzoe@dpg-d1ag2c95pdvs73apl8f0-a/lichess_puzzles
+
+WITH include no drop,
+     create tables,
+     create indexes,
+     reset sequences
+
+SET work_mem to '128MB',
+    maintenance_work_mem to '512 MB'
+
+CAST type text to varchar,
+     type datetime to timestamp;

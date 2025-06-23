@@ -37,7 +37,7 @@ router.get("/random", (req, res) => {
       openingTags: row.openingTags || null,
     };
 
-    console.log("✅ Puzzle served:", response.id, response.rating,response.solution);
+    console.log("✅ Puzzle served:", response.id, response.initialMove,response.solution);
     res.json(response);
   } catch (err) {
     console.error("❌ DB query failed:", err);
