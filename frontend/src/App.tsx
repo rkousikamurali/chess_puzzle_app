@@ -368,7 +368,8 @@ const App: React.FC = () => {
   const [feedback, setFeedback] = useState<string>("");
 
   const loadPuzzle = async () => {
-    const res = await axios.get("http://localhost:3001/api/puzzles/random");
+    // const res = await axios.get("http://localhost:3001/api/puzzles/random");
+    const res = await axios.get("https://02b9-49-205-84-206.ngrok-free.app/api/puzzles/random");
     const data: Puzzle = res.data;
     const newGame = new Chess();
     newGame.load(data.initialFen);
@@ -457,7 +458,7 @@ const App: React.FC = () => {
 
     setUsedHintThisPuzzle(true);
     const from = currentUserMove.slice(0, 2);
-    const to = currentUserMove.slice(2, 4);
+    // const to = currentUserMove.slice(2, 4);
 
     if (hintState === 0) {
       setHighlightedSquares({
