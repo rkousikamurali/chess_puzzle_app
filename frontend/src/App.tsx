@@ -507,7 +507,7 @@ const App: React.FC = () => {
                 <strong>Rating:</strong> {puzzle.rating}
               </p>
               <p>
-                <strong>Themes:</strong> {puzzle.themes.join(", ")}
+                <strong>Themes:</strong> {puzzle.themes[0].split(" ").join(", ")}
               </p>
             </>
           )}
