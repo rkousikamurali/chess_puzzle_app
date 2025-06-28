@@ -18,7 +18,8 @@ export default function PuzzleInteraction() {
   const loadPuzzle = async () => {
     try {
       setStatus("Loading puzzle...");
-      const res = await axios.get("http://localhost:3001/api/puzzles/random");
+      // const res = await axios.get("http://localhost:3001/api/puzzles/random");
+      const res = await axios.get("https://loosely-immense-quail.ngrok-free.app/api/puzzles/random")
       const { initialFen, initialMove, solution, id } = res.data;
       const game = new Chess(initialFen);
       game.move({ from: initialMove.slice(0, 2), to: initialMove.slice(2, 4) });
