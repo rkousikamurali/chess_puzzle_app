@@ -45,7 +45,8 @@ const App: React.FC = () => {
   const [feedback, setFeedback] = useState<string>("");
 // 
   const loadPuzzle = async () => {
-    const res = await axios.get("http://192.168.0.109:3001/api/puzzles/random");
+    // const res = await axios.get("http://192.168.0.109:3001/api/puzzles/random");
+    const res = await axios.get("https://deep-flowers-watch.loca.lt/api/puzzles/random");
     // const res = await axios.get("https://02b9-49-205-84-206.ngrok-free.app/api/puzzles/random");
     // const res = await axios.get("https://loosely-immense-quail.ngrok-free.app/api/puzzles/random");
     const data: Puzzle = res.data;
